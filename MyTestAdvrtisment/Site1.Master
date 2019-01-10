@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MyTestAdvrtisment.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Registration</title>
+    <link href="StyleSheet1.css" rel="stylesheet" type="text/css" />
+    
+    <asp:ContentPlaceHolder   ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body style="background-color:#bbdaae">
+    <form id="form1" runat="server">  
+        
+         <div style="background-image:url(Resources/myhead.jpg); border-color:gold; border-style:groove; border-width:medium;  height: 250px;"  >
+       
+            
+             <asp:Table runat="server" ID="Table1" BorderStyle="Groove" Visible="true" BorderWidth="1" BorderColor="Gold">
+                 <asp:TableRow> <asp:TableCell>Логин</asp:TableCell> <asp:TableCell><asp:TextBox runat="server" ID="LoginTextBox"></asp:TextBox></asp:TableCell>  </asp:TableRow>
+                 <asp:TableRow> <asp:TableCell>Пароль</asp:TableCell> <asp:TableCell><asp:TextBox runat="server" ID="PasswordTextBox"></asp:TextBox></asp:TableCell> </asp:TableRow>
+                 <asp:TableRow> <asp:TableCell ColumnSpan="2"><asp:Button runat="server" Text="Войти" OnClick="UserAccessClick" /> <asp:Label runat="server" ID="ErorrLabel" Visible="false" ForeColor="Red" Text="Неверной логин или пароль" ></asp:Label> </asp:TableCell>   </asp:TableRow>
+                 <asp:TableRow> <asp:TableCell ColumnSpan="2"><a href="Authorization.aspx">Зарегистрироваться</a></asp:TableCell> </asp:TableRow>
+             </asp:Table>
+             
+             <asp:Label runat="server" ID="LabelOut" Visible="false" ></asp:Label> <asp:Button runat="server" Text="Выйти" Visible="false" ID="OutButton" OnClick="Unnamed_Click1" />
+
+            <asp:HyperLink runat="server" NavigateUrl="~/administratorpage.aspx" Visible="false" ID="AdminHyperLink">Просмотреть содержимое БД</asp:HyperLink>
+         <asp:TextBox runat="server" ID="TextBoxSearch" CssClass="TextBoxStyle"  ></asp:TextBox>
+             <asp:Label ID="LabelSearchError" runat="server" Text="Зайдите на сайт и введите значение в строку поиска" Visible="true" CssClass="ErrorLabel"></asp:Label>
+            <h5> Если зайти как администратор (admin, admin)   <br /> то можно посмотреть всю базу данных  </h5>
+             <br /><br /> 
+             <asp:Menu runat="server">
+                 <Items> <asp:MenuItem Text="Главная страница" NavigateUrl="~/Default.aspx"></asp:MenuItem>  </Items>
+             </asp:Menu>
+
+         <asp:Button runat="server" OnClick="Unnamed_Click" CssClass="ButtonStyle" />
+            &nbsp;<asp:Label runat="server"  ID="WelcomeLabel" CssClass="WelcomeLabel"></asp:Label>
+            
+             </div>
+        <aside style="float:right; min-height:636px ">
+            <asp:AdRotator runat="server" ID="AdRotator2" AdvertisementFile="~/OlegAdvertisment2.xml" Target="_blank" />
+        </aside>
+        <aside style="float:left; min-height:636px">
+             <asp:AdRotator runat="server" ID="AdRotator1" AdvertisementFile="~/OlegAdvertisment.xml" Target="_blank" />
+        </aside>
+            <br />
+            <br />       
+            <br />
+            <br />
+            <br />
+            <br />
+         <div style="min-height:636px; width:650px; margin:auto; text-align:center">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1"  runat="server">
+              
+            </asp:ContentPlaceHolder>
+         </div>
+       
+        <footer style="height:20px;  background-color:burlywood ">
+            <h3 style="font-style:oblique; font-weight:100; text-align:center">Создатель сайта Кислов Олег. Email для связи: oleg213213@yandex.ru</h3>
+        </footer>
+    </form>
+ 
+</body>
+    
+</html>

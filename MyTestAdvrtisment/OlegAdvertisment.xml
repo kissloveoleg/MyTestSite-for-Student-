@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>Resources/banner1.jpg</ImageUrl>
+    <NavigateUrl>Advertisment.html</NavigateUrl>
+    <AlternateText>Oleg Advertisment</AlternateText>
+    <Impressions>60</Impressions>
+    <Keyword>Oleg Kislov</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>Resources/Banner2.jpg</ImageUrl>
+    <NavigateUrl>Advertisment.html</NavigateUrl>
+    <AlternateText>Advertisment Block 2</AlternateText>
+    <Impressions>40</Impressions>
+    <Keyword>Oleg Kislov</Keyword>
+  </Ad>
+ 
+</Advertisements>
