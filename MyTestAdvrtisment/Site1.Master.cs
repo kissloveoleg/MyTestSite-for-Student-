@@ -55,7 +55,8 @@ namespace MyTestAdvrtisment
             cookie = Request.Cookies["OlegCookie2018"];
             if(cookie!=null&& TextBoxSearch.Text != null)
             {
-                Response.Redirect("DiplomInfo.aspx?param="+TextBoxSearch.Text);
+               
+                Response.Redirect("DiplomInfo.aspx?param=" + TextBoxSearch.Text);
             }
            
             
@@ -69,7 +70,7 @@ namespace MyTestAdvrtisment
             cookie = new HttpCookie("OlegCookie2018");
             cookie.Expires= DateTime.Now.AddDays(-1);
             Response.Cookies.Add(cookie);
-            Response.Redirect("Default.aspx");
+            Response.Redirect("default");
            
         }
 
@@ -92,7 +93,7 @@ namespace MyTestAdvrtisment
                 cookie.Expires = DateTime.Now.AddDays(1);
                 Response.Cookies.Add(cookie);
 
-                Response.Redirect("Default.aspx");
+                Response.Redirect("default");
             }
             else { ErorrLabel.Visible = true; }
         }

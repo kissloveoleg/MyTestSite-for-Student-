@@ -19,6 +19,7 @@ namespace MyTestAdvrtisment
            
             try
             {
+                ErrorLabel.Visible = false;
                 string coonectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             _connection = new SqlConnection(coonectionString);
             _connection.Open();
@@ -35,21 +36,21 @@ namespace MyTestAdvrtisment
             }
                 if (connection_result == null)
                 {
-                    TextBoxID.Text = "Такого студента нету в базе даных"; reader.Close();
+                    ErrorLabel.Visible = true;
+                    reader.Close();
                     _connection.Close();
                 }
                 else
                 {     
                     reader.Close();
                     _connection.Close();
-                    Response.Redirect("Registration.aspx");
+                    Response.Redirect("registration");
                 }
             }
             catch(Exception ex)
             {
-                TextBoxID.Font.Size = 2;
-                TextBoxID.Text = "Возникла ошибка при нахождении судента, обратитесь в тех поддержку";
-                TextBoxID.Font.Size = 9;
+                ErrorLabel.Visible = true;
+                ErrorLabel.ToolTip = ex.Message;
             }
            
 
@@ -57,9 +58,5 @@ namespace MyTestAdvrtisment
             
         }
 
-        protected void TextBoxID_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

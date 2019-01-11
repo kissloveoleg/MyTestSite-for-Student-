@@ -92,6 +92,7 @@
     <None Include="Resources\banner4.jpg" />
     <None Include="Resources\advertisment.jpg" />
     <None Include="Resources\advertisment2.gif" />
+    <None Include="Resources\favicon.ico" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>

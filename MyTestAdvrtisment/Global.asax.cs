@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Web.Routing;
 
 namespace MyTestAdvrtisment
 {
@@ -14,8 +15,20 @@ namespace MyTestAdvrtisment
 
         protected void Application_Start(object sender, EventArgs e)
         {
-           
+            RegisterRoutes(RouteTable.Routes);
         }
+        void RegisterRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute("Authorization", "authorization", "~/Authorization.aspx");
+            routes.MapPageRoute("Default", "default", "~/Default.aspx");
+            routes.MapPageRoute("Registration", "registration", "~/Registration.aspx");
+            routes.MapPageRoute("Administrator", "administrator", "~/administratorpage.aspx");
+
+           
+            routes.MapPageRoute("Error", "error", "~/MyErrorPage.aspx");
+
+        }
+
 
         protected void Session_Start(object sender, EventArgs e)
         {

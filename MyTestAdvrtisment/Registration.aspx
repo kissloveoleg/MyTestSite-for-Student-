@@ -57,7 +57,7 @@
 
         <asp:TableRow> <asp:TableCell>Полное название организации где работаете</asp:TableCell><asp:TableCell> <br /> <asp:TextBox runat="server" ID="TextBoxOrganization"></asp:TextBox><br /> <br /> </asp:TableCell>  </asp:TableRow>
         <asp:TableRow> <asp:TableCell>Должность</asp:TableCell><asp:TableCell> <br /> <asp:TextBox runat="server" ID="TextBoxDolzhnost"></asp:TextBox> <br /> <br /> </asp:TableCell>  </asp:TableRow>
-        <asp:TableRow> <asp:TableCell>Город или населенный пункт*</asp:TableCell><asp:TableCell><br /> <asp:TextBox runat="server" ID="TextBoxCitiy" ForeColor="LightGray"></asp:TextBox><br /><asp:RequiredFieldValidator 
+        <asp:TableRow> <asp:TableCell>Город или населенный пункт*</asp:TableCell><asp:TableCell><br /> <asp:TextBox runat="server" ID="TextBoxCitiy"></asp:TextBox><br /><asp:RequiredFieldValidator 
             ID="RequiredFieldValidator5" 
             runat="server"
             ControlToValidate="TextBoxCitiy"

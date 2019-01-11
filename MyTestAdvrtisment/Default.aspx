@@ -9,6 +9,7 @@
     <asp:Label runat="server" Font-Size="Larger" Text="Введите номер студенческого билета"></asp:Label>
     <br />
       <br />
+      <asp:Label runat="server" Visible="false" ID="ErrorLabel" Text="Студент не найден" ForeColor="Red"></asp:Label> 
       <br />
     <asp:TextBox Height="40" BorderColor="Black" BackColor="#ffff99" Width="450" Font-Size="X-Large"  runat="server" ID="TextBoxID"></asp:TextBox> 
       <br />

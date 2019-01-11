@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.Routing;
 namespace MyTestAdvrtisment
 {
     public partial class DiplomInfo : System.Web.UI.Page
@@ -13,7 +14,7 @@ namespace MyTestAdvrtisment
         
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            
         }
     }
 }
